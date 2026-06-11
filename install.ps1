@@ -33,7 +33,7 @@ $steamPath = $steamPath -replace '/', '\'
 Write-Host "Steam ditemukan di: $steamPath" -ForegroundColor Green
 
 # 3. Menyiapkan Folder Plugin (JALUR BARU MILLENNIUM)
-$pluginDir = "$steamPath\plugins\VenusMods" 
+$pluginDir = "$steamPath\plugins\venusmods"
 if (-not (Test-Path $pluginDir)) {
     New-Item -Path $pluginDir -ItemType Directory -Force | Out-Null
 }
