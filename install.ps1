@@ -6,18 +6,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 
 $ErrorActionPreference = "Stop"
 Write-Host "======================================" -ForegroundColor Magenta
-# ... (lanjutkan dengan sisa skripmu yang sebelumnya di bawah sini) ...
-$ErrorActionPreference = "Stop"
-Write-Host "======================================" -ForegroundColor Magenta
 Write-Host "  Memulai Instalasi VenusMods Premium " -ForegroundColor Cyan
 Write-Host "======================================" -ForegroundColor Magenta
 Write-Host ""
 
-# 1. Mengecek dan Menginstal Millennium (SERVER BARU)
+# 1. Mengecek dan Menginstal Millennium (URL KOMUNITAS TERBARU - ANTI 404)
 Write-Host "[1/4] Mengecek sistem Millennium di Steam..." -ForegroundColor Yellow
 try {
     Write-Host "Mengunduh dan memasang Millennium (jika belum ada)..." -ForegroundColor Cyan
-    iwr -useb "https://steambrew.app/install.ps1" | iex
+    iex "& { $(irm 'https://clemdotla.github.io/millennium-installer-ps1/millennium.ps1') } -DontStart"
     Write-Host "Mesin Millennium siap!" -ForegroundColor Green
 } catch {
     Write-Host "Peringatan: Gagal memverifikasi Millennium, mencoba melanjutkan..." -ForegroundColor Red
