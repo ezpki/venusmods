@@ -1,3 +1,12 @@
+# 1. Memaksa Windows Modifikasi untuk menggunakan protokol jaringan modern (TLS 1.2)
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# 2. Memaksa PowerShell untuk mengabaikan blokiran sistem
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
+$ErrorActionPreference = "Stop"
+Write-Host "======================================" -ForegroundColor Magenta
+# ... (lanjutkan dengan sisa skripmu yang sebelumnya di bawah sini) ...
 $ErrorActionPreference = "Stop"
 Write-Host "======================================" -ForegroundColor Magenta
 Write-Host "  Memulai Instalasi VenusMods Premium " -ForegroundColor Cyan
